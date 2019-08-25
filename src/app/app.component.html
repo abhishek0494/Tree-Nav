@@ -37,26 +37,6 @@
   <!-- Page content -->
   <div ng-sidebar-content>
     <div>
-        <!-- <div class="col">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item" 
-                *ngFor="let item of breadcrumbList; let i = index"
-                [class.active]="i===breadcrumbList.length-1">
-                <a [routerLink]="item.path" *ngIf="i!==breadcrumbList.length-1">
-                  {{ item.name }}
-                </a>
-                <span *ngIf="i===breadcrumbList.length-1">{{ item.name }}</span>
-              </li>
-            </ol> -->
-          <!-- </div> -->
-          <div class="offset-md-1 col-md-10">
-            	
-          </div>
-        <!-- <mdb-breadcrumb>
-            <mdb-breadcrumb-item *ngFor="let item of breadcrumbList" style="cursor:pointer">
-              <mdb-icon fas icon="caret-right" class="mr-1"></mdb-icon> {{item.name}}
-            </mdb-breadcrumb-item>
-          </mdb-breadcrumb> -->
         <router-outlet></router-outlet>
     </div>
     </div>
