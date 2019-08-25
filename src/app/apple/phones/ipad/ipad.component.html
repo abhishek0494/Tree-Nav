@@ -1,0 +1,36 @@
+<div class="container" style="margin-top:10px">
+    <mat-card style="width:100%">
+      <mat-card-header>
+        <div mat-card-avatar><i class="fab fa-apple fa-2x"></i></div>
+        <mat-card-title>Apple Ipads</mat-card-title>
+        <mat-card-subtitle>Reviews</mat-card-subtitle>
+      </mat-card-header>
+      <div>
+        <mat-list class="dark" style="width:100%" style=" background: rgba(0, 0, 0, 0.2);">
+          <mat-list-item *ngFor="let item of Reviews">
+            <div matListAvatar>
+              <ngx-avatar name="{{item.name}}"></ngx-avatar>
+            </div>
+            <h3 matLine> <span>{{item.name}}</span>
+            
+          <p style="position:absolute;right:10px;top:0px;color:#66bb6a">{{item.rating}} <mat-icon><i class="far fa-star"></i></mat-icon></p></h3>
+            <p matLine>
+              <span>{{item.review}}</span>
+            </p>
+            
+              <div class="row" matLine>
+                <div class="col-md-3">
+                  <star-rating *ngIf="item.rating<3" [value]="item.rating" checkedcolor="#ef5350" uncheckedcolor="#78909c" size="18px"
+                    readonly="true" (rate)="onRate($event)"></star-rating>
+                    <star-rating *ngIf="item.rating>=3" [value]="item.rating" checkedcolor="#66bb6a" uncheckedcolor="#78909c" size="18px"
+                    readonly="true" (rate)="onRate($event)"></star-rating>
+                </div>
+              </div>
+  
+  
+            <mat-divider></mat-divider>
+          </mat-list-item>
+        </mat-list>
+      </div>
+    </mat-card>
+  </div>

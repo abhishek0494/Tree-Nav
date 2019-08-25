@@ -1,0 +1,31 @@
+.breadcrumb li .active {
+    // color: #0275d8;
+    text-decoration: underline;
+  }
+    .breadcrumb-fill2 {
+      margin-top:11px;
+       padding: 8px; 
+       background: black; 
+       color: #ffffff; 
+       border-radius: 15px; 
+       box-shadow: 0px 0px 50px 0px rgba(0,0,0,.2);
+    }
+.breadcrumb-fill2 .fab { 
+    position: absolute !important; 
+    background: black !important; 
+    padding: 20px !important; 
+    border-radius: 50% !important; 
+    left: -10px !important; 
+    top: -5px !important; 
+    font-size: 24px !important; 
+    line-height: 1 !important; 
+    box-shadow: 0px 0px 50px 0px rgba(0,0,0,.2) !important;
+}
+.breadcrumb-fill2, .breadcrumb-fill2 li, .breadcrumb-fill2 li.active, .breadcrumb-fill2 li a { color: white;}
+.breadcrumb-fill2 li { margin-right: 30px !important;}
+.app-toolbar {
+    position: sticky;
+    position: -webkit-sticky; /* For macOS/iOS Safari */
+    top: 0; /* Sets the sticky toolbar to be on top */
+    z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
+}

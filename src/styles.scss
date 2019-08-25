@@ -1,1 +1,76 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/css/all.css';
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.sidebar{
+    // background-color: white!important;
+    color: white ;
+    overflow-x: hidden !important;
+    width: 300px;
+    background-color: #181717fb !important;
+    box-shadow: 0 16px 38px -12px rgba(0,0,0,.56), 0 4px 25px 0 rgba(0,0,0,.12), 0 8px 10px -5px rgba(0,0,0,.2);
+    border-top: 0px;
+    }
+    
+    
+        a.activeItem:hover{
+            background: #f7ae41!important;
+            box-shadow: 0 0 13px  #8d8d8d;
+            border-radius: 5px;
+            width:94%;
+            z-index: 2;
+            color: #000 !important;
+            margin-left:8px;
+            -webkit-transition: all 0.2s ease-in-out;
+            -moz-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out; 
+        }
+    
+   
+        .disable { 
+            // pointer-events: none;
+            cursor: not-allowed !important;
+            color: rgba(161, 161, 161, 0.39)!important;
+    background-color: rgba(0,0,0,.12)!important;
+         }
+     
+.docked{
+    position: absolute;
+    right: 25px !important;
+}
+.z-depth-2 {
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19)!important;
+}
+.view img {
+    position: relative;
+    display: block;
+}
+.img-fluid{
+    height: 257px;
+    width: 385;
+}
+.img-fluid1{
+    height: 327px;
+    width: 450;
+}
+.img-fluid1{
+    height: 337px;
+    width: 480;
+}
+.rounded {
+    border-radius: .25rem!important;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  .center1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    // width: 50%;
+  }

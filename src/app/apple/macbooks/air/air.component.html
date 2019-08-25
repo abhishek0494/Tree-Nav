@@ -1,0 +1,109 @@
+<div class="container" style="margin-top:10px">
+  <mat-card>
+    <mat-card-header>
+      <!-- <div mat-card-avatar><i class="fab fa-amazon fa-2x"></i></div> -->
+      <mat-card-title>Apple MacBook Air Core i5 8th Gen</mat-card-title>
+      <mat-card-subtitle>(8 GB/256 GB SSD/Mac OS Mojave) MREC2HN/A (13.3 inch, Silver, 1.25 kg)</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <div class="col-md-5">
+          <img src="./../../../../assets/images/macbookair.jpeg">
+          <mat-list>
+              <mat-list-item>
+                <mat-icon matListIcon><i class="far fa-calendar-check green-text"></i></mat-icon>
+                <h3 matLine> No cost EMI ₹8,750/month. Standard EMI also available </h3>
+              </mat-list-item>
+              <mat-list-item>
+                  <mat-icon matListIcon><i class="fas fa-sync green-text"></i></mat-icon>
+                  <h3 matLine> Get upto ₹7500 off on exchange. Extra ₹2000 off over exchange value on select models(Price inclusive)</h3>
+                </mat-list-item>
+                <mat-list-item>
+                    <mat-icon matListIcon><i class="fas fa-tags green-text"></i></mat-icon>
+                    <h3 matLine> Special PriceGet extra ₹23000 off (price inclusive of discount)</h3>
+                  </mat-list-item>
+                  <mat-list-item>
+                      <mat-icon matListIcon><i class="fas fa-tag green-text"></i></mat-icon>
+                      <h3 matLine> Bank Offer10% Instant Discount on Federal Bank Debit Cards</h3>
+                    </mat-list-item>
+            </mat-list>
+        </div>
+        <div class="col-md-7">
+          <h4>
+            <span class="green-text"><strong>₹1,04,990</strong></span>
+            <span class="grey-text"><small>₹1,34,900</small></span>
+            <span class="green-text"><small>22% off</small></span>
+          </h4>
+          <br />
+          <mat-accordion>
+            <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Specification
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <h3>Processor And Memory Features</h3>
+              <table class="text-center mat-elevation-z8" mdbTable>
+                <tr>
+                  <th>Processor Brand</th>
+                  <td>Intel</td>
+                </tr>
+                <tr>
+                  <th>Processor Name</th>
+                  <td>Core i5 8th gen</td>
+                </tr>
+                <tr>
+                  <th>SSD Capacity</th>
+                  <td>256 GB</td>
+                </tr>
+                <tr>
+                  <th>Ram</th>
+                  <td>8GB DDR3</td>
+                </tr>
+                <tr>
+                  <th>Clock Speed</th>
+                  <td>1.6 GHz with Turbo Boost Upto 3.6 GHz</td>
+                </tr>
+                <tr>
+                  <th>Number of cores</th>
+                  <td>2</td>
+                </tr>
+              </table>
+
+            </mat-expansion-panel>
+            <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Warranty
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <table class="text-center mat-elevation-z8" mdbTable>
+                <tr>
+                  <th>Warranty Summary</th>
+                  <td>1 Year Carry In Warranty</td>
+                </tr>
+                <tr>
+                  <th>Warranty Service Type</th>
+                  <td>Carry In</td>
+                </tr>
+                <tr>
+                  <th>Covered in Warranty</th>
+                  <td>Manufacturing Defects</td>
+                </tr>
+                <tr>
+                  <th>Not Covered in Warranty</th>
+                  <td>Physical Damage</td>
+                </tr>
+                <tr>
+                  <th>Domestic Warranty</th>
+                  <td>1 Year</td>
+                </tr>
+              </table>
+
+            </mat-expansion-panel>
+          </mat-accordion>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

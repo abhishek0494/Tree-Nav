@@ -1,0 +1,27 @@
+<!-- <ul class="collapsible collapsible-accordion" *ngFor="let link of links">
+    <li><a class="collapsible-header waves-light">{{link.text}}</a>
+        <div class="collapsible-body">
+            <app-childnav [node]="link"></app-childnav>
+        </div>
+    </li>
+</ul> -->
+<!-- <ul id="accordion{{links[0].id}}" >
+  <div *ngFor="let link of links">
+    <li class="collapsed nav-item active" id="headingOne" data-toggle="collapse" [attr.data-target]="'#collapse'+link.id" aria-expanded="true"
+      aria-controls="collapse{{link.id}}">
+      <a class="nav-link">
+          <h5 class="mb-0">
+              {{link.text}}
+            </h5>
+      </a>
+      
+    </li>
+
+    <li style="border-left:1px #ffca28 solid" id="collapse{{link.id}}" class="collapse" aria-labelledby="headingOne" [attr.data-parent]="'#accordion'+links[0].id">
+        <app-childnav [node]="link"></app-childnav>
+    </li>
+  </div>
+</ul> -->
+<mat-nav-list >
+    <app-childnav  *ngFor="let item of links" [isOpened]="isOpened" [node]="item"></app-childnav>
+  </mat-nav-list>

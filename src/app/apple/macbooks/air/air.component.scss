@@ -1,0 +1,13 @@
+.green-text{
+    color: green;
+    margin:4px;
+}
+.grey-text{
+    color:  #9e9e9e!important;
+    margin:4px;
+    text-decoration: line-through;
+}
+::ng-deep .mat-list .mat-list-item .mat-line{
+    word-wrap: break-word;
+   white-space: pre-wrap;
+}

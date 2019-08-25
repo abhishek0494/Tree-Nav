@@ -1,21 +1,67 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<mat-toolbar class="app-toolbar">
+  <span><mat-icon (click)="_toggleSidebar()"><i class="fab fa-angular" style="font-size:48px"></i></mat-icon></span>
+  <span style="flex: 1 1 auto;"></span>
+    <ol class="breadcrumb breadcrumb-fill2">
+        <li *ngFor="let item of breadcrumbList; let i = index" class="breadcrumb-item" 
+        [class.active]="i===breadcrumbList.length-1">
+        <span *ngIf="i==0 && i===breadcrumbList.length-1" [innerHtml]="item.iconName"></span>
+        <span *ngIf="i==0 && i!==breadcrumbList.length-1" ><a [routerLink]="item.path" [innerHtml]="item.iconName"></a></span>
+        <span *ngIf="i!==0"> <a [routerLink]="item.path" *ngIf="i!==breadcrumbList.length-1">
+            {{ item.name }}
+          </a></span>
+          <span *ngIf="i===breadcrumbList.length-1 && i!==0">{{ item.name }}</span>
+       
+      </li>
+      </ol>
+      <span style="flex: 1 1 auto;"></span>
+      <span></span>
+</mat-toolbar>
 
-<router-outlet></router-outlet>
+<ng-sidebar-container>
+ 
+  <!-- A sidebar -->
+  <ng-sidebar sidebarClass="sidebar" [(opened)]="_opened"  [(dock)]="_isDocked" [(mode)]='mode' dockedSize='80px'>
+      <div style="margin-top: 5px">
+          <div>
+            <button mat-icon-button (click)='_toggleSidebar()' class="float-right" style="margin-right: 20px">
+              <mat-icon aria-label="Example icon-button with a heart icon">menu</mat-icon>
+            </button>
+          </div>
+          <!-- <button mat-raised-button type="submit" color="primary" (click)='_toggleSidebar()'><div mat-card-avatar><mat-icon>apps</mat-icon></div></button> -->
+        </div>
+        <br><br>
+      <app-rootnav [isOpened]="_opened"></app-rootnav>
+  </ng-sidebar>
+
+  <!-- Page content -->
+  <div ng-sidebar-content>
+    <div>
+        <!-- <div class="col">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item" 
+                *ngFor="let item of breadcrumbList; let i = index"
+                [class.active]="i===breadcrumbList.length-1">
+                <a [routerLink]="item.path" *ngIf="i!==breadcrumbList.length-1">
+                  {{ item.name }}
+                </a>
+                <span *ngIf="i===breadcrumbList.length-1">{{ item.name }}</span>
+              </li>
+            </ol> -->
+          <!-- </div> -->
+          <div class="offset-md-1 col-md-10">
+            	
+          </div>
+        <!-- <mdb-breadcrumb>
+            <mdb-breadcrumb-item *ngFor="let item of breadcrumbList" style="cursor:pointer">
+              <mdb-icon fas icon="caret-right" class="mr-1"></mdb-icon> {{item.name}}
+            </mdb-breadcrumb-item>
+          </mdb-breadcrumb> -->
+        <router-outlet></router-outlet>
+    </div>
+    </div>
+
+</ng-sidebar-container>
+
+
+
