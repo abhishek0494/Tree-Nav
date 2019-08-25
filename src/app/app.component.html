@@ -24,7 +24,7 @@
   <ng-sidebar sidebarClass="sidebar" [(opened)]="_opened"  [(dock)]="_isDocked" [(mode)]='mode' dockedSize='80px'>
       <div style="margin-top: 5px">
           <div>
-            <button mat-icon-button (click)='_toggleSidebar()' class="float-right" style="margin-right: 20px">
+            <button tabindex="-1" mat-icon-button (click)='_toggleSidebar()' class="float-right" style="margin-right: 20px">
               <mat-icon aria-label="Example icon-button with a heart icon">menu</mat-icon>
             </button>
           </div>

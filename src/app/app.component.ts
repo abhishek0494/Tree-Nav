@@ -45,6 +45,6 @@ export class AppComponent implements OnInit {
     })
   }
   ngOnInit() {
-    this.router.navigateByUrl('/google')
+    this.router.navigateByUrl('/microsoft')
   }
 }

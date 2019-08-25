@@ -1,5 +1,128 @@
 export var navItems = [
     {
+        displayName: 'Microsoft',
+        iconName: '<i class="fab fa-microsoft"></i>',
+        route: 'microsoft',
+        children: [
+            {
+                displayName: 'Windows',
+                iconName: '<i class="fab fa-windows"></i>',
+                route: 'microsoft/windows'
+            },
+            {
+                displayName: 'Azure',
+                iconName: '<i class="fas fa-cloud"></i>',
+                route: 'microsoft/azure'
+            },
+            {
+                displayName: '  MS Office',
+                iconName: '<i class="far fa-file"></i>',
+                route: 'microsoft/office',
+                children: [
+                    {
+                        displayName: 'MS Word',
+                        iconName: '<i class="far fa-file-word"></i>',
+                        route: 'microsoft/office/word'
+                    },
+                    {
+                        displayName: 'MS Excel',
+                        iconName: '<i class="far fa-file-excel"></i>',
+                        route: 'microsoft/office/excel'
+                    },
+                    {
+                        displayName: 'MS PowerPoint',
+                        iconName: '<i class="far fa-file-powerpoint"></i>',
+                        route: 'microsoft/office/powerpoint'
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        displayName: 'Apple',
+        iconName: '<i class="fab fa-apple"></i>',
+        route: 'apple',
+        children: [
+            {
+                displayName: 'Macbooks',
+                iconName: '<i class="fas fa-laptop-code"></i>',
+                route: 'apple/macbooks',
+                children: [
+                    {
+                        displayName: 'Macbook Pro',
+                        iconName: 'star_rate',
+                        route: 'apple/macbooks/pro',
+                        children: []
+                    },
+                    {
+                        displayName: 'Macbook Air',
+                        iconName: 'star_rate',
+                        route: 'apple/macbooks/air',
+                    },
+                ]
+            },
+            {
+                displayName: 'Apple Pay',
+                iconName: '<i class="fab fa-apple-pay"></i>',
+                route: 'apple/pay',
+                disabled: true,
+                children: []
+            },
+            {
+                displayName: 'Phones and Tablets',
+                iconName: '<i class="fas fa-tablet-alt"></i>',
+                route: 'apple/phones',
+                children: [
+                    {
+                        displayName: 'I Phone',
+                        iconName: '<i class="fas fa-mobile"></i>',
+                        route: 'apple/phones/iphones'
+                    },
+                    {
+                        displayName: 'I Pad',
+                        iconName: '<i class="fas fa-tablet"></i>',
+                        route: 'apple/phones/ipad'
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        displayName: 'Amazon',
+        iconName: '<i class="fab fa-amazon"></i>',
+        route: 'amazon',
+        children: [
+            {
+                displayName: 'Cloud',
+                iconName: '<i class="fas fa-cloud"></i>',
+                route: 'amazon/cloud',
+                children: [
+                    {
+                        displayName: 'AWS',
+                        iconName: '<i class="fab fa-aws"></i>',
+                        route: 'amazon/cloud/aws',
+                    },
+                    {
+                        displayName: 'S3',
+                        iconName: 'storage',
+                        route: 'amazon/cloud/s3',
+                    }
+                ]
+            },
+            {
+                displayName: 'Amazon Pay',
+                iconName: '<i class="fab fa-amazon-pay"></i>',
+                route: 'amazon/pay',
+                children: []
+            },
+            {
+                displayName: 'e-comerce',
+                iconName: '<i class="fas fa-shopping-cart"></i>',
+                route: 'amazon/ecomerce'
+            }
+        ]
+    },
+    {
         displayName: 'Google',
         iconName: '<i class="fab fa-google"></i>',
         route: 'google',
@@ -87,129 +210,6 @@ export var navItems = [
                     //     }
                     //     ]
                     // }
-                ]
-            }
-        ]
-    },
-    {
-        displayName: 'Amazon',
-        iconName: '<i class="fab fa-amazon"></i>',
-        route: 'amazon',
-        children: [
-            {
-                displayName: 'Cloud',
-                iconName: '<i class="fas fa-cloud"></i>',
-                route: 'amazon/cloud',
-                children: [
-                    {
-                        displayName: 'AWS',
-                        iconName: '<i class="fab fa-aws"></i>',
-                        route: 'amazon/cloud/aws',
-                    },
-                    {
-                        displayName: 'S3',
-                        iconName: 'storage',
-                        route: 'amazon/cloud/s3',
-                    }
-                ]
-            },
-            {
-                displayName: 'Amazon Pay',
-                iconName: '<i class="fab fa-amazon-pay"></i>',
-                route: 'amazon/pay',
-                children: []
-            },
-            {
-                displayName: 'e-comerce',
-                iconName: '<i class="fas fa-shopping-cart"></i>',
-                route: 'amazon/ecomerce'
-            }
-        ]
-    },
-    {
-        displayName: 'Microsoft',
-        iconName: '<i class="fab fa-microsoft"></i>',
-        route: 'microsoft',
-        children: [
-            {
-                displayName: 'Windows',
-                iconName: '<i class="fab fa-windows"></i>',
-                route: 'microsoft/windows'
-            },
-            {
-                displayName: 'Azure',
-                iconName: '<i class="fas fa-cloud"></i>',
-                route: 'microsoft/azure'
-            },
-            {
-                displayName: '  MS Office',
-                iconName: '<i class="far fa-file"></i>',
-                route: 'microsoft/office',
-                children: [
-                    {
-                        displayName: 'MS Word',
-                        iconName: '<i class="far fa-file-word"></i>',
-                        route: 'microsoft/office/word'
-                    },
-                    {
-                        displayName: 'MS Excel',
-                        iconName: '<i class="far fa-file-excel"></i>',
-                        route: 'microsoft/office/excel'
-                    },
-                    {
-                        displayName: 'MS PowerPoint',
-                        iconName: '<i class="far fa-file-powerpoint"></i>',
-                        route: 'microsoft/office/powerpoint'
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        displayName: 'Apple',
-        iconName: '<i class="fab fa-apple"></i>',
-        route: 'apple',
-        children: [
-            {
-                displayName: 'Macbooks',
-                iconName: '<i class="fas fa-laptop-code"></i>',
-                route: 'apple/macbooks',
-                children: [
-                    {
-                        displayName: 'Macbook Pro',
-                        iconName: 'star_rate',
-                        route: 'apple/macbooks/pro',
-                        children: []
-                    },
-                    {
-                        displayName: 'Macbook Air',
-                        iconName: 'star_rate',
-                        route: 'apple/macbooks/air',
-                    },
-                ]
-            },
-            {
-                displayName: 'Apple Pay',
-                iconName: '<i class="fab fa-apple-pay"></i>',
-                route: 'apple/pay',
-                disabled: true,
-                children: []
-            },
-            {
-                displayName: 'Phones and Tablets',
-                iconName: '<i class="fas fa-tablet-alt"></i>',
-                route: 'apple/phones',
-                children: [
-                    {
-                        displayName: 'I Phone',
-                        iconName: '<i class="fas fa-mobile"></i>',
-                        route: 'apple/phones/iphones'
-                    },
-                    {
-                        displayName: 'I Pad',
-                        iconName: '<i class="fas fa-tablet"></i>',
-                        route: 'apple/phones/ipad'
-                    }
                 ]
             }
         ]
