@@ -9,15 +9,15 @@ import { navItems } from './data'
 export class AppComponent implements OnInit {
 
   title = 'Tree-Nav';
-  private breadcrumbList = []
-  private _opened: boolean = true;
+  public breadcrumbList = []
+  public _opened: boolean = true;
   _isDocked: boolean = true;
   mode: string = 'push';
   menu = navItems
-  private _toggleSidebar() {
+  public _toggleSidebar() {
     this._opened = !this._opened;
   }
-  constructor(private router: Router) {
+  constructor(public router: Router) {
     let routerUrl: string, routerList: Array<any>, target: any;
     this.router.events.subscribe((event: Event) => {
       if (event instanceof NavigationEnd) {

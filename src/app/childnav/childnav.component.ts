@@ -28,7 +28,7 @@ export class ChildnavComponent implements OnInit {
   @Input() node: Node;
   @Input() depth: number;
   @Input() isOpened: boolean;
-  constructor(private router:Router) {
+  constructor(public router:Router) {
     if (this.depth === undefined) {
       this.depth = 0;
     }
