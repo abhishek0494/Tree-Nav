@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, Event, NavigationEnd } from '@angular/router';
 import { navItems } from './data'
+import { fadeAnimation } from './animation';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  animations: [fadeAnimation]
 })
 export class AppComponent implements OnInit {
 
@@ -46,5 +48,8 @@ export class AppComponent implements OnInit {
   }
   ngOnInit() {
     this.router.navigateByUrl('/microsoft')
+  }
+  public getRouterOutletState(outlet) {
+    return outlet.isActivated ? outlet.activatedRoute : '';
   }
 }

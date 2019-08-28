@@ -36,9 +36,9 @@
 
   <!-- Page content -->
   <div ng-sidebar-content>
-    <div>
-        <router-outlet></router-outlet>
-    </div>
+      <div style="position:relative" [@fadeAnimation]="getRouterOutletState(o)">
+          <router-outlet #o="outlet"></router-outlet>
+        </div>
     </div>
 
 </ng-sidebar-container>
