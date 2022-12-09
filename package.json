@@ -24,7 +24,7 @@
     "@angular/router": "~7.2.0",
     "@fortawesome/fontawesome-free": "^5.10.2",
     "angular-bootstrap-md": "^7.5.4",
-    "angular-cli-ghpages": "^0.5.3",
+    "angular-cli-ghpages": "^1.0.5",
     "chart.js": "^2.5.0",
     "core-js": "^2.5.4",
     "font-awesome": "^4.7.0",
